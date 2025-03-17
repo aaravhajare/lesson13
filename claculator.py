@@ -9,8 +9,14 @@ def mul(p , q) :
     return p * q
 
 def div(p , q) :
-    return p / q
+ 
+    if (p % 2 == 0) and (q % 2 == 0):
+        return p / q
+    else :
+        p = float(p)
+        q = float(q)
 
+        return p / q
 print("choose one opration ")
 print("a.add")
 print("b.sub")
@@ -19,8 +25,8 @@ print("d.division")
 
 c = input("enter one shoice")
 
-n1 = int(input("enter first number"))
-n2 = int(input("enter second number"))
+n1 = float(input("enter first number"))
+n2 = float(input("enter second number"))
 
 if (c == "a") :
     print(n1 , "+" , n2 , "=" , add(n1,n2))
